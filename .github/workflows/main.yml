@@ -53,6 +53,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          sudo docker pull kermitthefrog1/infra_action:latest
+          sudo docker pull kermitthefrog1/infra_actions
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 kermitthefrog1/infra_action:latest 
+          sudo docker run --rm -d -p 5000:5000 kermitthefrog1/infra_actions:latest 
